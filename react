@@ -1,2 +1,28 @@
+React
+
 1. What is component?
 A component is a reusable block of code. It has its own UI and logic, and we can use the component whenever we need. 
+
+2. What is props?
+props are used to pass data from a parent component to a child componet 
+
+3. What is state?
+State is used to store data. we can update the state a using state update method and use this data whenever we need.
+
+4. What is event?
+An event is a user interaction. For example, clicking a button, typing in an input or submitting a form 
+
+5. What is Forms?
+Forms are used to collect user input like name, email and password.
+
+6. What is Conditional rendering?
+Conditional rendering means displaying ui based on a condtion. 
+{isLoggedIn ? <Dashboard /> : <Login />}
+
+7. What is Lists?
+List are used to display multiple items from an array. 
+const users = ["John", "David", "Sam"];
+{users.map(user => <li>{user}</li>)}
+
+8. What is API calls ?
+API calls are used to communicate with a backend server, we use methods like get, post, put, delete to send or recevied data and we can use that data in our application.
