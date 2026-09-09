@@ -26,3 +26,17 @@ const users = ["John", "David", "Sam"];
 
 8. What is API calls ?
 API calls are used to communicate with a backend server, we use methods like get, post, put, delete to send or recevied data and we can use that data in our application.
+
+9. What is react life cycle? 
+The React lifecycle means a React component goes through different stages, such as mounting, updating, and unmounting. 
+Mounting → Component is created and added to the UI.
+Updating → Component updates when state or props change.
+Unmounting → Component is removed from the UI.
+
+10. What is react hooks?
+React hooks are functions that allow us to use state and react features in the functional components.
+
+11. What is useState?
+UseState is a react hook used to store and update data in a component.
+const [count, setCount] = useState(0);
+setCount(10);
