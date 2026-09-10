@@ -112,3 +112,10 @@ Authtentication is used to verify the user's identity and allow them to access t
 21. What is Protected routes ?
 Protected routes are used to prevent access for unauthenticated users.
 
+22. What is lazy loading?
+Lazy loading means loading a page or component when we need it, Which helps to improve application performance.
+const ProductDetails = React.lazy(() => import("./ProductDetails"));
+<Suspense fallback={<p>Loading...</p>}>
+  <ProductDetails />
+</Suspense>
+
