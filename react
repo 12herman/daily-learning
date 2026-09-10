@@ -40,3 +40,75 @@ React hooks are functions that allow us to use state and react features in the f
 UseState is a react hook used to store and update data in a component.
 const [count, setCount] = useState(0);
 setCount(10);
+
+12. What is useEffect?
+Useeffect is used when a component loads or when a dependency value changes, we can use it for api calls and other side effects.
+useEffect(() => {
+  fetchUsers();
+}, [userId]);
+
+13. What is component life cycle?
+The component lifecycle means a component goes through different stages, such as mounting, updating, and unmounting. 
+Mounting → Component is created and added to the UI.
+Updating → Component updates when state or props change.
+Unmounting → Component is removed from the UI.
+
+14. What is useMemo?
+Usememo is a react hook used to memoize a calculated value and avoid unnecessari calculated value.
+const total = useMemo(() => {
+  return calculateTotal(items);
+}, [items]);
+
+15. What is useCallback?
+UseCallback is a react hook used to memoize the function and avoid unnessari function recreation.
+const handleAddToCart = useCallback((product) => {
+  addToCart(product);
+}, []);
+<Product onAdd={handleAddToCart} />
+
+16. What is context api?
+Context api is used to share data between components without passing props.
+const UserContext = createContext();
+<UserContext.Provider value={user}>
+  <Navbar />
+  <Dashboard />
+  <Profile />
+</UserContext.Provider>
+
+17. What is custom hook?
+A custom hook is a resusable function used to share logic between components.
+
+function useFetch(url) {
+  const [data, setData] = useState(null);
+  useEffect(() => {
+    fetch(url)
+      .then(res => res.json())
+      .then(data => setData(data));
+  }, [url]);
+  return data;
+}
+// cal the custom hook
+function Users() {
+  const users = useFetch("/api/users");
+}
+function Products() {
+  const products = useFetch("/api/products");
+}
+
+18. What is Redux?
+Redux is a state management library we use to manage and share data between components.
+
+19. What is Performance optimization ?
+If we want to performance optimization in react application, we can avoid unnecessary re-renders and function recreation by using usemeo, usecallback, React.memo and lazy loading. 
+
+useMemo → Value
+useCallback → Function
+React.memo → Component
+Lazy loading → Load when needed 
+
+20. What is Authentication?
+Authtentication is used to verify the user's identity and allow them to access the application.
+
+21. What is Protected routes ?
+Protected routes are used to prevent access for unauthenticated users.
+
